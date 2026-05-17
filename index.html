@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Profile</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- PROFILE -->
+    <section>
+        <img id="profilePic" src="https://e022f1828decb47546187c77dbc9de80_0.png" alt="Profile Picture" onclick="document.getElementById('fileInput').click()">
+        <input type="file" id="fileInput" hidden>
+
+        <h2 id="name">Justin Carl R. Rivero</h2>
+        <button onclick="editText('name')">Edit</button>
+
+        <p id="bio">Your bio here...</p>
+        <button onclick="editText('bio')">Edit</button>
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+        <h3>Skills</h3>
+        <ul id="skills">
+            <li draggable="true">HTML</li>
+            <li draggable="true">CSS</li>
+            <li draggable="true">JavaScript</li>
+        </ul>
+        <button onclick="addItem('skills')">Add Skill</button>
+        <button onclick="deleteSelected('skills')">Delete</button>
+    </section>
+
+    <!-- EDUCATION -->
+    <section>
+        <h3>Education</h3>
+        <div id="education">
+            <p contenteditable="false">School - Course - Year</p>
+        </div>
+        <button onclick="editEducation()">Edit</button>
+        <button onclick="addEducation()">Add</button>
+    </section>
+
+    <!-- HOBBIES -->
+    <section>
+        <h3>Hobbies</h3>
+        <ul id="hobbies">
+            <li draggable="true">Gaming</li>
+            <li draggable="true">Collecting figures</li>
+            <li draggable="true">Eating</li>
+        </ul>
+        <button onclick="addItem('hobbies')">Add Hobby</button>
+        <button onclick="deleteSelected('hobbies')">Delete</button>
+    </section>
+
+    <button onclick="resetData()">RESET</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
